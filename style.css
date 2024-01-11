@@ -3,13 +3,12 @@
   padding: 0;
 }
 
-body {
-  /* background: #000000; */
-}
-
 section {
   height: 100vh;
-  background: #2e2e2e;
+  background: url(image/8-bit-background.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh);
+  background-position-y: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,9 +17,7 @@ section {
 #celebrate-button {
   border: 3px black solid;
   color: #f1f1f1;
-
   background: #31c110;
-
   padding: 10px;
   font-family: "Press Start 2P", monospace;
   position: relative;
