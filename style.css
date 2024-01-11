@@ -15,7 +15,7 @@ section {
   align-items: center;
 }
 
-button {
+#celebrate-button {
   border: 3px black solid;
   color: #f1f1f1;
 
@@ -33,4 +33,13 @@ button {
     top: 3px;
     left: 3px;
   }
+}
+
+#mute-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
 }

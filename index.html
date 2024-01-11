@@ -9,14 +9,22 @@
       href="https://fonts.googleapis.com/css?family=Press+Start+2P"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a84cd75bfe.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <audio id="ta-da-audio">
       <source src="audio/ta-da.mp3" type="audio/mpeg" />
     </audio>
+    <input type="checkbox" name="mute-sound" id="mute-checkbox" hidden />
+    <button id="mute-button" onclick="toggleMute()">
+      <i class="fa-solid fa-volume-high"></i>
+    </button>
     <section>
       <div>
-        <button onclick="celebrate()">Celebrate</button>
+        <button id="celebrate-button" onclick="celebrate()">Celebrate</button>
       </div>
     </section>
 
@@ -36,6 +44,22 @@
       function celebrate() {
         playTaDa();
         showConfetti();
+      }
+
+      function toggleMute() {
+        const muteCheckbox = document.getElementById("mute-checkbox");
+        const isMuted = muteCheckbox.checked;
+        muteCheckbox.checked = !muteCheckbox.checked;
+        document.getElementById("ta-da-audio").muted = muteCheckbox.checked;
+        if (isMuted) {
+          document.getElementById(
+            "mute-button"
+          ).innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
+        } else {
+          document.getElementById(
+            "mute-button"
+          ).innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
+        }
       }
     </script>
   </body>
