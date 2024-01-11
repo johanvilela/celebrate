@@ -32,6 +32,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script>
+      const mutedState = localStorage.getItem("muted-state");
+      if (mutedState === "false") {
+        toggleMute();
+      }
       function playTaDa() {
         const taDaAudio = document.getElementById("ta-da-audio");
         taDaAudio.play();
@@ -52,6 +56,7 @@
         const muteCheckbox = document.getElementById("mute-checkbox");
         const isMuted = muteCheckbox.checked;
         muteCheckbox.checked = !muteCheckbox.checked;
+        localStorage.setItem("muted-state", !muteCheckbox.checked);
         document.getElementById("ta-da-audio").muted = muteCheckbox.checked;
         if (isMuted) {
           document.getElementById(
