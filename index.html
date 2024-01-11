@@ -16,13 +16,26 @@
     </audio>
     <section>
       <div>
-        <button onclick="playTaDa()">Celebrate</button>
+        <button onclick="celebrate()">Celebrate</button>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script>
       function playTaDa() {
         const taDaAudio = document.getElementById("ta-da-audio");
         taDaAudio.play();
+      }
+
+      const jsConfetti = new JSConfetti();
+
+      function showConfetti() {
+        jsConfetti.addConfetti();
+      }
+
+      function celebrate() {
+        playTaDa();
+        showConfetti();
       }
     </script>
   </body>
