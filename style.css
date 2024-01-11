@@ -10,7 +10,8 @@ section {
   height: calc(100vh);
   background-position-y: bottom;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -39,4 +40,13 @@ section {
   background: transparent;
   color: white;
   border: none;
+}
+
+#quote {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  line-height: 1.8;
+  background: #f3e2af;
+  padding: 8px;
+  color: #4c4c4c;
 }
