@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celebrate</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio id="ta-da-audio">
+      <source src="audio/ta-da.mp3" type="audio/mpeg" />
+    </audio>
+    <section>
+      <div>
+        <button onclick="playTaDa()">Celebrate</button>
+      </div>
+    </section>
+    <script>
+      function playTaDa() {
+        const taDaAudio = document.getElementById("ta-da-audio");
+        taDaAudio.play();
+      }
+    </script>
+  </body>
+</html>

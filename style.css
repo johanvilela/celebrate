@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background: #000000; */
+}
+
+section {
+  height: 100vh;
+  background: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: 3px black solid;
+  color: #f1f1f1;
+
+  background: #31c110;
+
+  padding: 10px;
+  font-family: "Press Start 2P", monospace;
+  position: relative;
+
+  &:hover {
+    background: #48fb00;
+    color: white;
+  }
+  &:active {
+    top: 3px;
+    left: 3px;
+  }
+}
