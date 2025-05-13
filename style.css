@@ -4,7 +4,7 @@
 }
 
 section {
-  height: 100vh;
+  height: 100dvh;
   background: url(image/8-bit-background.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh);
