@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  height: 100dvh;
+}
+
 section {
   height: 100dvh;
   background: url(image/8-bit-background.jpg) no-repeat;
